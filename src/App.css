@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  background-color: #7e7c7b;
+  box-sizing: border-box;
   min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  padding: 50px;
+  font-family: "Playfair Display", cursive;
+}
+.mainCart {
+  width: 100%;
+  align-items: self-end;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.header {
+  height: 70px;
+  width: 90%;
+  background-color: white;
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  border-bottom: 1px solid rgb(194, 191, 191);
+}
+.name {
+  font-weight: bold;
+  font-size: 30px;
+}
+.name::after {
+  content: ".";
+  color: red;
+}
+.medHeader {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+  font-weight: 700;
+}
+.medHeader span {
+  cursor: pointer;
+}
+
+.endHeader {
+  padding: 10px;
+  padding-top: 8px;
+  font-weight: 700;
+  border: 2px solid red;
+  cursor: pointer;
+}
+.pageBody {
+  width: 100%;
+  display: flex;
+}
+.imag {
+  width: 41%;
+  min-width: 300px;
+  height: 550px;
+}
+.side {
+  width: 60%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.endSide {
+  width: 100%;
+  height: 170px;
+  background-color: #262626;
+  color: white;
+  padding-inline-start: 16%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  box-sizing: border-box;
+}
+.grad {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px rgba(203, 202, 202, 0.279) solid;
+  padding-bottom: 10px;
+}
+.skillsCart {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
+  padding: 50px;
+}
+.mySkills {
+  color: rgb(151 33 31);
+  font-weight: bold;
+  font-size: 30px;
+}
+.mySkills::after {
+  content: " ";
+  display: block;
+  width: 50px;
+  border-bottom: 3px solid #262626;
+  padding-top: 20px;
+  margin-left: 35%;
+}
+.skills {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burger {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(151 33 31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.dropDown {
+  position: fixed;
+  top: 110px;
+  width: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+}
+.dropDown div {
+  scale: 1.4;
+  color: rgb(151 33 31);
+  margin-bottom: 20px;
+}
+.ON {
+  transform: rotateY(0deg);
+  transform-origin: right;
+  transition-duration: 2s;
 }
 
-.App-link {
-  color: #61dafb;
+.OFF {
+  transform: rotateY(90deg);
+  transform-origin: left;
+  transition-duration: 2s;
+}
+.projectImg {
+  width: 200px;
+  height: 400px;
+}
+.projectContainer {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 0px 20px #efebe9;
+}
+.projectInfo {
+  font-weight: 700;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.projectTitle {
+  color: rgb(151 33 31);
+}
+.projectBtns {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.projectBtns a {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #efebe9;
+  color: rgb(151 33 31);
+  border: 1px solid rgb(151 33 31);
+}
+.chatContainer {
+  background-color: #2c3333;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  column-gap: 20px;
+}
+.chatInputs {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.chatInputs input {
+  height: 40px;
+  padding-inline-start: 10px;
+  background-color: #cbe4de;
+  border: none;
+  outline: none;
+}
+.detailsContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.detailsContainer div span {
+  min-width: 30px;
+
+  color: #919191;
+}
+.detailsContainer button {
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .medHeader {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .endHeader {
+    display: none;
+  }
+  .header {
+    justify-content: center;
+    width: 100%;
+    border: none;
+  }
+  .pageBody {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .imag {
+    width: 90%;
+  }
+  .side {
+    width: 100%;
+  }
+  .endSide {
+    margin-top: 40px;
+    box-sizing: border-box;
+    padding: 10%;
+  }
+
+  .projectContainer {
+    flex-direction: column-reverse;
+  }
+  .projectImg {
+    width: 100%;
+  }
+  .skillsCart {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .container {
+    padding: 10px;
+  }
+  .chatContainer {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .chatInputs {
+    width: 100%;
+  }
+  .detailsContainer {
+    width: 100%;
   }
 }
